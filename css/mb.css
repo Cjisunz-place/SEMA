@@ -1,0 +1,615 @@
+@charset "UTF-8";
+/* reset, common =====================================================================*/
+/* 폰트*/
+@font-face {font-family:'kopub-b'; 
+src: url(../fonts/KoPubWorld\ Dotum\ Bold.ttf);font-weight: 800;}
+@font-face {font-family:'kopub-m'; 
+src: url(../fonts/KoPubWorld\ Dotum\ Medium.ttf);;font-weight: 700;}
+@font-face {font-family:'kopub-l'; 
+src: url(../fonts/KoPubWorld\ Dotum\ Light.ttf);font-weight: 400;}
+*{margin: 0; padding: 0; font-family: 'kopub-m';}    
+a{text-decoration: none; display: inline-block; color:#000;background: none;}
+li{list-style: none;}
+label, span{display: inline-block;}
+.blind{font-size: 0; position: absolute; left:-9999px;}
+button{background: none; border:0; outline: none;}
+.center{margin:auto;}
+
+/* sprite */
+.icon{
+    display: inline-block;
+    background-image: url(img/spritem.png);
+    background-size: 1000px 1000px;   
+}
+.icon-iseoulu{width: 130px; height: 40px; background-position: -804px -203px;}
+.icon-semalogo{width: 310px;height: 100px; background-position: -99px -299px;}
+.icon-notice{width: 30px; height: 30px; background-position: -102px -102px;}
+.icon-close{width: 34px; height: 34px; background-position: -423px -223px;}
+.icon-closeb{width: 42px; height: 42px; background-position: -329px -228px;}
+.icon-closeb1{width: 42px; height: 42px; background-position: -329px -228px;}
+.icon-right-triangle{transform: rotate(90deg);width: 20px;height: 20px;background-position: -305px -3px;}
+.icon-up-triangle{width: 20px; height: 20px; background-position: -305px -3px;}
+.icon-down-triangle{width: 20px; height: 20px; background-position: -305px -70px;}
+.icon-search{width: 46px;height:46px; background-position: -405px -5px;}
+.icon-search1{width: 54px;height:54px;background-position: -523px -22px;}
+.icon-like{width: 74px;height: 70px; background-position: -703px -106px;}
+.icon-likef{width:74px ;height:70px ; background-position:-803px -106px;}
+.icon-contentslike{width: 44px;height: 40px; background-position: -1px -4px;}
+.icon-contentslikef{width:44px ;height:40px ; background-position:-101px -4px;}
+.icon-login{width: 32px;height: 32px; background-position:-204px -53px;}
+.icon-logout{width: 35px;height:32px ; background-position:-203px -5px;}
+.icon-docent{width: 50px; height: 50px; background-position: -400px -100px;}
+.icon-popclose{width: 30px;height: 30px; background-position:-19px -150px;}
+.icon-twitt{width: 54px; height: 54px;background-position: -500px -200px;}
+.icon-insta{width: 54px; height: 54px;background-position: -700px -200px;}
+.icon-google{width: 31px; height: 34px;background-position: -505px -304px;}
+.icon-naver{width: 32px; height: 32px;background-position: -600px -360px;}
+.icon-top{width: 80px; height: 70px;background-position: -799px -308px;}
+.icon-facebook{width: 54px; height: 54px; background-position: -600px -200px;}
+.icon-facebookw{width: 23px; height: 44px; background-position: -500px -350px;}
+.icon-kakao{width: 46px; height: 44px; background-position: -607px -308px;}
+.icon-more{width: 44px;height:44px; background-position: -96px -148px;}
+.icon-eventmore{width:35px;height: 35px; background-position:-110px -210px;}
+.icon-noticemore{width:35px;height: 35px; background-position:-110px -210px;}
+.icon-calender{width: 66px;height: 65px;  background-position:-705px -6px;}
+.icon-map{width: 50px;height:  74px; background-position: -16px -102px;}
+.icon-member{width:70px;height: 50px; background-position:-504px -114px;} 
+.icon-menu{width:35px;height: 35px; background-position:-910px -11px;}
+
+/* notice =====================================================================*/
+/* 서울특별시 공지 */
+.seoul-gnb-holder{ 
+    text-align: center;
+    width: 100%;
+    position: relative;
+    height: 100px;
+    padding: 30px 0 0;
+    box-sizing: border-box;
+    right: 0;
+}
+.icon-iseoulu{
+    transform: scale(0.8);
+    left: 4px;
+    position: absolute;
+    top: 32px;
+}
+.icon-notice{
+    left: 70px;
+    position: absolute;
+    top: 4px;
+}
+.seoul-gnb-news{      
+    height: 40px;
+    overflow: hidden;
+    padding-left: 60px;
+}
+.seoul-gnb-news dt{position: absolute;}
+.seoul-gnb-news dd{width: 200px;}
+.seoul-gnb-news dd a{
+    width: 180px;
+    transform: translateX(100px);
+    border-bottom: 2px solid;
+    font-size:16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-top: 2px;
+    line-height: 30px;
+}
+
+.seoul-gnb-menu{position: absolute; right:10px; top:7px;}
+.seoul-gnb-menu dd{float: left; margin-left:25px;}
+.seoul-gnb-menu dd a{font-size: 16px;}
+
+/* 미술관 공지 */
+.sema-notice{
+    width: 100%;
+    margin: auto;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    height: 100px;
+    background: #B3A99F;
+    line-height: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.sema-notice a{
+    line-height: 20px;
+    font-size: 16px;
+    width: 100%;
+    color: #fff;
+    text-align: left;
+}
+
+.sema-notice .icon-close{
+    transform: scale(0.6) translateY(-50px);
+    position: absolute;
+    right: 5px;
+}
+
+/* header =====================================================================*/
+.icon-semalogo{transform: scale(0.6);}
+
+header{
+    background: #f8f8f8;
+    box-sizing: border-box;
+    padding-top: 20px;
+    width: 100%;
+    height: 150px;
+}
+header h1 {text-align: center;}
+
+.icon-search{transform: scale(0.9) translate(15px, -55px);}
+.icon-menu{
+    right: 15px;
+    position: absolute;
+    transform:scale(0.9) translateY(-50px);
+}
+header .icon-closeb1{
+    transform: scale(0.8) translateY(-50px);
+    right: 15px;
+    position: absolute;
+}
+header .icon-closeb{
+    position: absolute;
+    left: 15px;
+    transform: scale(0.8) translateY(-60px);
+}
+/* nav =====================================================================*/
+nav.open {right: 0;}
+nav {
+   transform: translateY(-40px);
+    z-index: 1;
+    position: absolute;
+    right: -250px;
+    width: 250px;
+    background: #b1c6cc;
+    transition: 0.5s;
+}
+nav .icon-close{
+    position: absolute;
+    transform: scale(0.7);
+    left: -50px;
+    top: 0;
+}
+
+.gnb {
+    height: auto;
+    display: block;
+}
+.gnb>li>a {
+    padding-left: 10px;
+    line-height: 50px;
+    height: 50px;
+    color: #fff;
+    margin: 0 10px;
+}
+.gnb>li>a.active {
+    width: 250px;
+    background: #4e7890;
+    color: #fff;
+    border-bottom: 1px solid #eee;
+
+}
+.gnb li{
+    height: auto;
+}
+.gnb > ul {
+    background: #b1c6cc;
+    font-size: 20px;
+    position: relative;
+    border-bottom: 1px solid #eee;
+    padding: 0;
+}
+.gnb .box li {
+    padding-left: 20px;
+    line-height: 40px;
+}
+.gnb .box{    
+    background: #4e7890; 
+    border-bottom: 1px solid #fff;
+    display: none;
+    padding: 10px 0;
+    border-top:1px solid #fff;
+}
+.gnb .box a{color: #fff;}
+
+/* search =====================================================================*/
+.search-area{
+    height: 400px;
+    position: absolute;
+    bottom: 39px;
+}
+.search-area .icon-search, .search-area .icon-closeb{
+    transform: scale(0.8);
+    top: 70px;
+    position: absolute;
+    left: 10px;
+}
+
+#btn-search-open,
+.search button{
+    position: absolute; 
+    right:0; 
+    bottom: -4px; 
+    font-size: 20px; 
+    width: 40px;
+    height: 40px; 
+    color:#fff;
+}
+
+.search{
+    top: 130px;
+    left: 10px;
+    z-index: 1;
+    position: absolute;
+    width: 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.search.open{width: 330px;}
+.search input{
+    border-radius: 5px;
+    border: 2px solid #7082c0;
+    padding: 0 10px; 
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+.search button{    
+    position: absolute;
+    transform: scale(0.6) translateX(-73px);
+
+}
+.search-area .icon-closeb{    transform:translate(10px, 5px)scale(0.7);}
+::placeholder{color: #7082c0;}
+
+/* 로그인 =====================================================================*/
+.user-info{display: none;}
+.user-info{
+    width: 100%;
+    background: antiquewhite;
+    text-align: center;
+    height: 50px;
+    line-height: 55px;
+}
+.user-info b{color: cadetblue;}
+
+#id p{
+    transform: translateY(-18px);
+    font-size: 12px;
+    color: #e0e0e0;}
+p.message{
+    transform: translateY(-18px);
+    font-size: 12px;
+    color: #e0e0e0;
+}
+.login-pop{
+    top: 0;
+    position: fixed;
+    z-index: 4;
+    right: 50%;
+    transform: translateX(50%);
+    width: 100%;
+    display: none;
+}
+
+.login-form{    
+    height: 600px;
+    width: 90%;
+    position: fixed;
+    background: rgba(44,72,88,0.9);
+}
+.wrap form i{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.login-form form{
+    padding:100px 0 0;
+    width: 90%;
+    margin: auto;
+}
+.login-form form button, .login-pop form input{    
+    border-radius: 3px;
+    border: 1px solid #fff;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 40px;
+}
+#id, #password{
+    box-sizing: border-box;
+    padding: 10px;
+}
+#btn-submit{
+    margin-bottom: 10px;
+    color: #fff;
+    background: #1b2b35;
+    border: 1px solid #1b2b35;
+    font-size: 18px;
+}
+.form input{padding-left: 10px;}
+.login-form .find-info {
+    margin: auto;
+    width: 500px;
+    font-size: 12px;
+    color: #b3b3b3;
+}
+.login-form .find-info a {
+    color: #fff;
+}
+.login-form .find-info a:first-child{padding-left: 50px;}
+.find-info span {transform: translateX(30px);}
+.link{    
+    position: absolute;
+    transform: translateY(-18px);
+    right: 30px;
+}
+.sns-login{   
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+    height: 200px;
+}
+.sns-login a{ 
+    border-radius: 50%;
+    height: 52px;
+    color: #fff;
+    font-weight: bold;
+    width: 15%;
+}
+
+.sns-login a:first-child{transform: translate(-40px, 50px);background: #ffe900;}
+.sns-login a:first-child i{transform: translateY(5px) scale(0.8);}
+.sns-login a:nth-child(2){transform: translate(-20px,40px);background: #2db400;}
+.sns-login a:nth-child(2) i{transform: scale(0.8) translateY(12px);}
+.sns-login a:nth-child(3){transform: translate(5px, 60px);}
+.sns-login a:last-child{transform: translate(35px, 42px);color: #252525;background: #fff;}
+.sns-login a:last-child i{transform: scale(0.9) translateY(10px);}
+.login-form ::placeholder{color: #666;}
+
+/* 언어 =====================================================================*/
+.gnb li:last-child .box i{transform: translate(5px,6px);}
+.gnb .box li:last-child ul a.active{font-weight: bold; color: #2c4858;}
+.gnb .box li:last-child ul li{padding-left: 0;}
+.gnb .box li:last-child ul {display: none;}
+.gnb li:last-child .box .icon-down-triangle{transform: translate(5px,8px);}
+
+/* contents =====================================================================*/
+.gallery{overflow: hidden;}
+.gallery li{ display: none;}
+.content img{width: 100%;}
+.btn-area{
+    left: 10px;
+    position: relative;
+    width: 100px;
+    bottom: 55px;
+}
+.btn-area span{
+    line-height: 34px;
+    height: 30px;
+    width: 50px;
+    background: #7fc395;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #7fc395;
+    border-radius: 5px;
+    color: #fff;
+}
+.btn-area button{
+    transform: scale(0.8);
+    position: absolute;
+    top: -3px;
+}
+
+.content p{
+    padding-right: 100%;
+    width: 95%;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    text-align: right;
+    border-bottom: 3px solid #7082c0;
+    bottom: 45px;
+}
+.content b{
+    bottom: 30px;
+    position: relative;
+    background: #7082c0;
+    color: #fff;
+    padding: 10px 30px;
+}
+.textbox{
+    top: -20px;
+    padding: 0 10px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    position: relative;
+}
+.textbox dl dt:first-child{
+font-size: 14px;
+font-weight: 400;
+padding-bottom: 10px;
+}
+.more{
+    width: 100%;
+    transform: translateX(20px);
+    text-align: center;
+    font-size: 16px;
+}
+.icon-more{transform:translate(-8px,18px) scale(0.6);}
+/* program =====================================================================*/
+.program{        
+    height: 275px;
+    margin: 100px 0 20px;
+}
+.program h2{
+    padding: 0 0 20px 30px;
+    font-size: 26px;
+}
+.program button{
+    transform: translate(-20px, -58px) scale(0.7);
+    float: right;
+}
+.prg_wrap{
+    height: 215px;
+    width:100%;
+}
+.prg_wrap img{width: 50%;}
+.prg_wrap img:first-child{float: left;}
+.prg_wrap img:last-child{position: absolute;}
+
+/* review_wrap =====================================================================*/
+.review_wrap h2{
+    padding-left: 20px;
+    line-height: 50px;
+    border-bottom: 3px solid #B3A99F;
+    font-size: 26px;
+}
+.review_wrap button{
+    position: absolute;
+    float: right;
+    transform: translateY(-46px) scale(0.7);
+    right: 18px;
+}
+.review_wrap ul{
+    padding: 20px;
+    width: 100%;
+}
+.review_wrap a{width: 100%;}
+.review_wrap .s-title {
+    font-size: 16px;
+    color: #666;
+    position: absolute;
+    display: inline-block;
+    white-space: nowrap;
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+.review_wrap .date{
+    width: 70px;    
+    left: 220px;
+    text-align: right;
+    font-size: 16px;
+    color: #666;
+    position: relative;
+    }
+    
+/* bottom-tab =====================================================================*/
+.bottom-tab{height: 280px;}
+.tab-nav{
+    margin-bottom: 20px;
+    overflow: hidden; border-bottom:3px solid #B3A99F;}
+.tab-nav li{    
+    float: left;
+    width: 100px;}
+.tab-nav li a{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    line-height: 50px;
+    text-align: center;
+    width: 150px;
+    font-size: 26px;
+}
+.tab-nav li a.active{
+    background: #B3A99F;
+    color: #fff;
+    text-align: center;
+}
+.tab-nav li:first-child a, .tab-nav li:nth-child(2) a{width: 100%;}
+
+.tab-contents{
+    height: 30px;
+    position: relative;
+}
+.tab-nav button{
+    right: -350px;
+    position: relative;
+    top: 8px;
+}
+.tab-contents > div{
+    height: 220px; 
+    display: none;
+}
+.tab-contents ul{line-height: 30px;}
+.bottom-tab .s-title {
+    font-size: 16px;
+    color: #666;
+    left: 20px;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    
+    }
+.bottom-tab  #tab6 .s-title, .bottom-tab  #tab7 .s-title{ width: 35%;}
+.bottom-tab .date{
+    text-align: right;
+    font-size: 16px;
+    color: #666;
+    position: absolute;
+    right: 57px; 
+        }
+.bottom-tab  #tab6 .date, .bottom-tab  #tab7 .date{
+    text-align: left;
+    left: 240px;
+}
+/* footer =====================================================================*/
+footer{  
+    width: 100%;
+    color: #444;
+    background: #4e7890;
+    height: 270px;
+    text-align: center;
+}
+footer button{
+    margin: 0 10px;
+    transform: translateY(20px);
+  }
+footer a{
+    display: inline;/* display-none =====================================================================*/
+
+    color: #444;    
+    }
+.footer-btn{    
+    margin: 0 0 20px;
+    padding: 10px;
+    border-bottom: 2px solid #a8c0c7;
+}
+.footer-btn button{transform: scale(0.8);}
+address{
+    padding: 10px 0 30px;
+    margin: auto;
+    width: 90%;
+    font-style: normal;
+}
+
+
+/* qiuck-menu =====================================================================*/
+#qiuck-menu{
+    top: 800px;
+    position: absolute;
+    height: 80px;
+    width: 100%;
+    background: #a8c0c7;
+    z-index: 1;
+}
+.quick-menu-area a{  
+    text-align: center;  
+    transform: scale(0.5);
+    position: relative;
+    right: -15px;
+}
+
+.quick-menu-area a:first-child i{transform:translate(-30px,4px);}
+.quick-menu-area a:nth-child(2) i{transform:translate(-26px,8px);}
+.quick-menu-area a:nth-child(3) i{transform: translateY(-4px);}
+.quick-menu-area a:nth-child(4) i{transform: translate(8px,-15px);}
+.quick-menu-area a:last-child i{transform: translate(-10px,7px);}
+

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>서울시립미술관(모바일)</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/mb.css">    
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/artm.js"></script>
+ 
+</head>
+
+<body>
+<!-- 상단 공지영역================================================================================== -->
+     <aside class="notice">
+    <!-- 서울 특별시 공지영역 -->
+        <div class="seoul-gnb-holder">       
+            <a href="https://www.seoul.go.kr/sgnb/seoulgnblog.do?gid=G079&amp;kind=logo&amp;link=https://www.seoul.go.kr" 
+            target="_blank" title="새창열림" class="icon icon-iseoulu">
+                <span class="blind">서울특별시</span>
+            </a>
+                        
+            <dl class="seoul-gnb-news">
+                <dt>
+                    <a href="https://www.seoul.go.kr/realmnews/in/list.do" target="_blank" 
+                    title="새창열림(서울소식)" class="icon icon-notice">
+                        <span class="blind">서울소식</span>
+                    </a>
+                </dt>
+                <dd>
+                    <a href="#" trget="_blank" title="새창열림">2019 청소년 정책 아카데미 청소년 우리가 바꾸는 서울</a>
+                </dd>
+                <dd>
+                    <a href="#" trget="_blank" title="새창열림">2019년 서울형 여행바우처 지원사업 2차 참여자 모집 공고</a>
+                </dd>
+                <dd>
+                    <a href="//www.seoul.go.kr/sgnb/seoulgnblog.do?gid=G079&amp;kind=hotissue&amp;link=http://news.seoul.go.kr/citybuild/archives/504975" target="_blank" title="새창열림">
+                        서울도시재생이야기관 '어반살롱(URBAN SALON)' 1회 개최</a>
+                </dd>
+                <dd>
+                    <a href="//www.seoul.go.kr/sgnb/seoulgnblog.do?gid=G079&amp;kind=hotissue&amp;link=http://news.seoul.go.kr/gov/archives/507431" target="_blank" title="새창열림">
+                        지속가능 서울 시민공청회 참가단 모집</a>
+                </dd>
+            </dl>			           
+        </div> 
+    <!-- /서울 특별시 공지영역 -->
+        
+    <!-- 미술관 공지 -->
+        <div class="sema-notice">
+            <div class="center">
+                <a href="#">데이비드 호크니 展(예매 1899-0042 ticket.melon.com 전시문의 1833-8085 단체도슨트신청 02-323-4501)</a>
+                <button class="icon icon-close">
+                    <span class="blind">닫기</span>
+                </button>
+            </div>                
+        </div>
+    <!-- /미술관 공지 -->
+    </aside>
+<!-- /상단 공지영역================================================================================== -->
+
+<!-- header영역================================================================================== -->
+    <header>               
+        <h1 class="logo">             
+            <a href="#" class="icon icon-semalogo"><span class="blind">시립미술관</span></a>
+        </h1>
+        <button class="icon icon-search"></button> 
+        <!-- 검색창-->    
+        <div class="search-area">
+            <form action="searchResult.html" class="search">
+                <input type="text" placeholder="검색어를 입력하세요.">
+            </form>               
+        </div>
+        <!-- /검색창-->    
+
+        <button class="icon icon-menu"></button>    
+         <!-- nav -->   
+        <nav>        
+            <div class="nav-bg"></div>
+            <ul class="gnb">
+                <li><a href="#">전시</a>
+                    <ul class="box">
+                        <li><a href="#">현재전시</a></li>
+                        <li><a href="#">예정전시</a></li>
+                        <li><a href="#">지난전시</a></li>
+                        <li><a href="#">연간전시일정</a></li>
+                        <li><a href="#">도슨트 시간안내</a></li>
+                        <li><a href="#">서울미디어시티비엔날레</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">교육/행사</a>
+                    <ul class="box">
+                        <li><a href="#">현재교육</a></li>
+                        <li><a href="#">예정교육</a></li>
+                        <li><a href="#">지난교육</a></li>
+                        <li><a href="#">연간교육일정</a></li>
+                        <li><a href="#">교육자료실</a></li>
+                        <li><a href="#">문화행사</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">소식/참여</a>
+                    <ul class="box">
+                        <li><a href="#">SeMA뉴스</a></li>
+                        <li><a href="#">신진미술인지원</a></li>
+                        <li><a href="#">대관SeMA영상</a></li>
+                        <li><a href="#">SeMA매거진</a></li>
+                        <li><a href="#">SeMA패밀리</a></li>
+                        <li><a href="#">SeMA SNS만족도조사</a></li>
+                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">SeMa소개</a>
+                    <ul class="box">
+                        <li><a href="#">비전/전략</a></li>
+                        <li><a href="#">미술관안내</a></li>
+                        <li><a href="#">조직/연혁/MI</a></li>
+                        <li><a href="#">미술관 관련 규정</a></li>
+                        <li><a href="#">미술관 후원회</a></li>
+                        <li><a href="#">신규분관조성</a></li>
+                        <li><a href="#">소장품</a></li>
+                        <li><a href="#">연구 출판자료</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">설정</a>
+                    <ul class="box">
+                        <li><a href="#">로그인</a></li>
+                        <li class="lang">
+                            <a href="#">언어<i class="icon icon-up-triangle"></i></a>
+                            <ul>
+                                <li><a href="#" class="active">KO</a></li>
+                                <li><a href="#">EN</a></li>
+                                <li><a href="#">CN</a></li>
+                                <li><a href="#">JP</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>                
+            </ul>        
+        </nav>
+        <!--/ nav -->   
+    </header>
+<!-- /header영역================================================================================== -->
+
+    <!--로그인 팝업-->    
+    <div class="login-pop">
+        <div class="user-info">
+            <span><b>홍길동</b>님 반갑습니다.</span>
+        </div>
+        
+        <div class="login-form">
+            <div class="wrap">
+                <form action="">
+                    <i class="icon icon-close"></i>
+                    <input type="text" placeholder="아이디 또는 이메일을 입력하세요." id="id">
+                    <input type="password" placeholder="비밀번호를 입력하세요." id="password">
+                    <button id="btn-submit" type="button">login</button>            
+                </form>
+                <div class="find-info">
+                    <span> 정보를 잊으셨나요?</span>
+                    <div class="link">
+                        <a href="#">아이디찾기</a> | <a href="#">비밀번호찾기</a>                
+                    </div>
+                </div>
+                <div class="sns-login">
+                    <a href=""><i class="icon icon-kakao"></i></a>
+                    <a href=""><i class="icon icon-naver"></i></a>
+                    <a href=""><i class="icon icon-facebook"></i></a>
+                    <a href=""><i class="icon icon-google"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <!--/로그인 팝업-->    
+
+    <!--퀵메뉴-->
+    <aside id="qiuck-menu">
+        <div class="quick-menu-area">        
+            <a href="#"><i class="icon icon-like"></i></a>                               
+            <a href="#"><i class="icon icon-map"></i></a>        
+            <a href="#"><i class="icon icon-calender"></i></a>        
+            <a href="#"><i class="icon icon-member"></i></a>         
+            <a href="#"><i class="icon icon-top"></i></a>
+        </div>
+    </aside>
+    <!--/퀵메뉴-->
+    
+    <!--gallery list-->
+    <section class="list">
+        <article class="exhibition_list center">
+            <ul class="gallery">                    
+                <li class="content">
+                    <div class="img-area">
+                        <a href="#">
+                            <img src="img/서main3.png" alt="안은미래 known future">
+                        </a>    
+                       
+                        <div class="btn-area">                                  
+                            <span>전시</span>
+                            <button><i class="icon icon-contentslike" class="active"></i></button>
+                        </div>                        
+                        <b>서소문본관</b>  
+                        <p>190626-190929</p>                        
+                    </div>
+                    <div class="textbox">
+                        <dl>
+                            <dt>안은미</dt>
+                            <dt>안은미래 known future</dt>
+                            <dt>서소문본관  1층 전시실</dt>
+                        </dl>                                 
+                    </div>
+                    
+                </li> 
+                                
+                <li class="content">
+                    <div class="img-area">
+                        <a href="#">
+                            <img src="img/북main2.png" alt="2019 서울 포커스 (두 번의 똑같은 밤은 없다.)">
+                        </a>
+                        
+                        <div class="btn-area">
+                            <span>전시</span>
+                            <button><i class="icon icon-contentslike" ></i></button>
+                        </div>                  
+                        <b>북서울미술관</b>  
+                        <p>190226-190609</p>                    
+                    </div>
+                    <div class="textbox">
+                        <dl>
+                            <dt>김명진 × 김지영 외 14팀</dt> 
+                            <dt>2019 서울 포커스 (두 번의 똑같은 밤은 없다.)</dt> 
+                            <dt>북서울미술관  1층 프로젝트갤러리1,<br>
+                                    북서울미술관  1층 전시실1</dt>                            
+                        </dl>                                                                        
+                    </div>   
+                </li>
+
+                <li class="content">
+                    <div class="img-area">
+                        <a href="#">
+                            <img src="img/창main1.png" alt="[신진미술인 전시지원 프로그램] 플로어">    
+                        </a>
+                        
+                        <div class="btn-area">
+                            <span>전시</span>
+                            <button><i class="icon icon-contentslike" ></i></button>
+                        </div>                       
+                        <b>SeMA창고</b>
+                        <p>190607-190626</p>                        
+                    </div>
+                    <div class="textbox">   
+                        <dl>
+                            <dt>전명은</dt>
+                            <dt>[신진미술인 전시지원 프로그램] 플로어</dt>
+                            <dt>SeMA창고  1층 전시실</dt>
+                        </dl>                               
+                    </div> 
+                </li>                 
+                
+                <li class="content">
+                    <div class="img-area">
+                        <a href="#">
+                            <img src="img/북main5.png" alt="드로잉 워크숍: 눈, 코, 입">
+                        </a>
+                       
+                        <div class="btn-area">
+                            <span>교육</span>
+                            <button><i class="icon icon-contentslike" ></i></button>
+                        </div>                               
+                        <b>북서울미술관</b>
+                        <p>190629-190629</p>                                     
+                    </div>
+                    <div class="textbox">
+                        <dl>
+                            <dt>보라리</dt>
+                            <dt>(소프트 카오스:공간 상상)展연계<br>초등학생 가족프로그램:6.29 오전</dt>
+                            <dt>북서울미술관 B1 스튜디오1</dt>                                                      
+                        </dl>    
+                    </div>                           
+                </li> 
+                <li class="content">
+                    <div class="img-area">
+                        <a href="#">
+                            <img src="img/창main2.png" alt="[신진미술인 전시지원 프로그램] 사로잡힌 돌" >
+                        </a>
+                        
+                        <div class="btn-area">
+                            <span>전시</span>
+                            <button><i class="icon icon-contentslike" ></i></button>
+                        </div>                               
+                        <b>SeMA창고</b>
+                        <p>190607-190626</p>                                     
+                    </div>
+                    <div class="textbox">
+                        <dl>
+                            <dt>김영글</dt>
+                            <dt>[신진미술인 전시지원 프로그램] 사로잡힌 돌</dt>
+                            <dt>SeMA창고1층 전시실</dt>                                                      
+                        </dl>    
+                    </div>                           
+                </li>     
+                <li class="content">
+                    <div class="img-area">
+                        <a href="#">
+                            <img src="img/서main2-sub2.png" alt="데이비드 호크니전" >
+                        </a>
+                        
+                        <div class="btn-area">
+                            <span>전시</span>
+                            <button><i class="icon icon-contentslike" ></i></button>
+                        </div>                               
+                        <b>서소문본관</b>
+                        <p>190322-190804</p>                                     
+                    </div>
+                    <div class="textbox">
+                        <dl>
+                            <dt>데이비드 호크니</dt>
+                            <dt>데이비드 호크니전</dt>
+                            <dt>서소문본관  2층 전시실,
+                                    서소문본관  3층 전시실</dt>                                                      
+                        </dl>    
+                    </div>                           
+                </li>        
+                <li class="content">
+                    <div class="img-area">
+                        <a href="#">
+                            <img src="img/북main1.png" alt="소프트 카오스: 공간 상상" >
+                        </a>
+                        
+                        <div class="btn-area">
+                            <span>전시</span>
+                            <button><i class="icon icon-contentslike" ></i></button>
+                        </div>                               
+                        <b>북서울미술관</b>
+                        <p>190326-190922</p>                                     
+                    </div>
+                    <div class="textbox">
+                        <dl>
+                            <dt>유현미</dt>
+                            <dt>소프트 카오스:공간 상상</dt>
+                            <dt>북서울미술관B1 어린이갤러리</dt>                                                      
+                        </dl>    
+                    </div>                           
+                </li>    
+                <li class="content">
+                    <div class="img-area">
+                        <a href="#">
+                            <img src="img/북main3.png" alt="WEB-RETRO" >
+                        </a>
+                        
+                        <div class="btn-area">
+                            <span>전시</span>
+                            <button><i class="icon icon-contentslike" ></i></button>
+                        </div>                               
+                        <b>북서울미술관</b>
+                        <p>190312-190609</p>                                     
+                    </div>
+                    <div class="textbox">
+                        <dl>
+                            <dt>김범 외 12팀</dt>
+                            <dt>WEB-RETRO</dt>
+                            <dt>북서울미술관2층 프로젝트갤러리2<br>
+                                    북서울미술관2층 전시실2</dt>                                                      
+                        </dl>    
+                    </div>                           
+                </li>    
+                <li class="content">
+                    <div class="img-area">
+                        <a href="#">
+                            <img src="img/북main4.png"  alt="유휴공간 프로젝트" >
+                        </a>
+                        
+                        <div class="btn-area">
+                            <span>전시</span>
+                            <button><i class="icon icon-contentslike" ></i></button>
+                        </div>                               
+                        <b>북서울미술관</b>
+                        <p>190101-191231</p>                                     
+                    </div>
+                    <div class="textbox">
+                        <dl>                
+                            <dt></dt>           
+                            <dt>유휴공간 프로젝트</dt>
+                            <dt>북서울미술관 관내</dt>                                                      
+                        </dl>    
+                    </div>                           
+                </li>                 
+                <li class="content">
+                    <div class="img-area">
+                        <a href="#">
+                            <img src="img/난main1.png" alt="2019 난지미술창작스튜디오 13기 국외입주자 1분기 성과보고전" >
+                        </a>
+                        
+                        <div class="btn-area">
+                            <span>전시</span>
+                            <button><i class="icon icon-contentslike" ></i></button>
+                        </div>                               
+                        <b>난지미술창작스튜디오</b>
+                        <p>190424-190428</p>                                     
+                    </div>
+                    <div class="textbox">
+                        <dl>
+                            <dt>Sophie Dvorak 외 4인</dt>
+                            <dt>2019 난지미술창작스튜디오 13기<br>국외입주자 1분기 성과보고전</dt>
+                            <dt>난지전시실</dt>                                                      
+                        </dl>    
+                    </div>                           
+                </li>  
+                <li class="content">
+                    <div class="img-area">
+                        <a href="#">
+                            <img src="img/난main2.png" alt="2018 난지아트쇼IV (뻐꾸기알)" >
+                        </a>
+                        
+                        <div class="btn-area">
+                            <span>전시</span>
+                            <button><i class="icon icon-contentslike" ></i></button>
+                        </div>                               
+                        <b>난지미술창작스튜디오</b>
+                        <p>181004-181014</p>                                     
+                    </div>
+                    <div class="textbox">
+                        <dl>
+                            <dt>박경률 외 4인</dt>
+                            <dt>2018 난지아트쇼IV <뻐꾸기알></dt>
+                            <dt>난지전시실 1,2</dt>                                                      
+                        </dl>    
+                    </div>                           
+                </li>
+                <li class="content">
+                    <div class="img-area">
+                        <a href="#">
+                            <img src="img/난main3.png" alt="2018 난지미술창작스튜디오 12기 국외입주자 3분기 성과보고전" >
+                        </a>
+                        
+                        <div class="btn-area">
+                            <span>전시</span>
+                            <button><i class="icon icon-contentslike" ></i></button>
+                        </div>                               
+                        <b>난지미술창작스튜디오</b>
+                        <p>180919-180922</p>                                     
+                    </div>
+                    <div class="textbox">
+                        <dl>
+                            <dt>Anna HARSANYI 외 4인</dt>
+                            <dt>2018 난지미술창작스튜디오 12기<br>국외입주자 3분기 성과보고전</dt>
+                            <dt>난지전시실</dt>                                                      
+                        </dl>    
+                    </div>                           
+                </li>  
+                <li class="content">
+                    <div class="img-area">
+                        <a href="#">
+                            <img src="img/난main4.png" alt="2018 난지미술창작스튜디오 12기 국외입주자 3분기 성과보고전" >
+                        </a>
+                        
+                        <div class="btn-area">
+                            <span>전시</span>
+                            <button><i class="icon icon-contentslike" ></i></button>
+                        </div>                               
+                        <b>난지미술창작스튜디오</b>
+                        <p>180919-180922</p>                                     
+                    </div>
+                    <div class="textbox">
+                        <dl>
+                            <dt>Anna HARSANYI 외 4인</dt>
+                            <dt>2018 난지미술창작스튜디오 12기 국외입주자 3분기 성과보고전</dt>
+                            <dt>난지전시실</dt>                                                      
+                        </dl>    
+                    </div>                           
+                </li>                                                                                                            
+            </ul>             
+            <a href="#" class="more">view more <i class="icon icon-more"></i></a>          
+        </article>
+
+        <article>
+            <div class="program">
+                <h2>프로그램</h2>
+                <button class="icon icon-eventmore"></button>
+                <div class="prg_wrap">
+                   <img src="img/창event1.jpg" alt="SeMA 창고 공간지원 전시 안내">
+                   <img src="img/북event1(pg).jpg" alt="(소프트 카오스: 공간 상상)展 연계 미취학학급 프로그램: 5.23">
+                </div>                           
+            </div>
+            <div class="review_wrap">                
+                <h2>REVIEW</h2>
+                <button class="icon icon-eventmore"></button>
+                <ul>
+                    <li><a href="#"><span class="s-title">Nice and relax place with a lot of joyful at there</span>
+                            <span class="date">19.05.19</span></a></li>
+                    <li><a href="#"><span class="s-title">Amazing Museum, so much detailed Korean history and so many delicate Artifacts a must visit when in Seoul!</span>
+                            <span class="date">19.02.20</span></a></li>
+                    <li><a href="#"><span class="s-title">‘영원한 나르시시스트 천경자’ 작품 속 여인의 눈빛이 작가의 마음을 나타내는 것 같았어요. 좋은 전시를 무료로 관람하게 되어 행복한 시간이었어요</span>
+                            <span class="date">18.05.27</span></a></li>
+                    <li><a href="#"><span class="s-title">르누아르여인들 전시를 보며
+                            우리나라의 예술계의 위상이 올라간다는 생각을 해 보았습니다. 
+                            우리나라에서 전세계 흩어져 있는 르누아르 진품을 바로 눈 앞에서 볼 수 있음에 너무 행복하였습니다 ^^</span>
+                            <span class="date">17.03.22</span></a></li>
+                </ul>
+                
+            </div>
+        </article>
+    
+        <article class="bottom-tab">
+            <ul class="tab-nav">
+                    <li><a href="#tab5" class="active">공지</a></li>
+                    <li><a href="#tab6">채용</a></li>
+                    <li><a href="#tab7">SeMA뉴스</a></li>  
+                    <button class="icon icon-eventmore"><span class="blind">더보기</span></button>                    
+            </ul>
+            <div class="tab-contents">
+                <div id="tab5" style="display: block;">
+                    <ul>
+                        <li><a href="#"><span class="s-title">2019 SeMA-하나 평론상 공모 안내 </span>
+                            <span class="date">19.08.01-08.25</span></a></li>
+                        <li><a href="#"><span class="s-title">[남서울미술관] 임시휴관 안내 </span>
+                            <span class="date">19.05.27-06.25</span></a></li>
+                        <li><a href="#"><span class="s-title">6월 북서울미술관 문화행사 일정</span>
+                            <span class="date">19.07.02-07.31</span></a></li>
+                        <li><a href="#"><span class="s-title">(데이비드 호크니)展 전시해설 서비스 예약 및 운영 시간 변경</span>
+                            <span class="date">19.06-08</span></a></li>
+                        <li><a href="#"><span class="s-title">분관시설을 활용한 「2019 SeMA 공간지원사업」 운영</span>
+                            <span class="date">19.06.11-12.28</span></a></li>                                
+                    </ul>
+                </div>
+                <div id="tab6">
+                    <ul>
+                        <li><a href="#"><span class="s-title">서울시립미술관 기간제근로자(경비) 서류 합격자 명단 공고</span>
+                            <span class="date">2019.06.18</span></a></li>
+                        <li><a href="#"> <span class="s-title">2019년 서울시립미술관 기간제근로자(시설경비원, 대체인력) 채용공고</span>
+                            <span class="date">2019.06.04</span></a></li>
+                        <li><a href="#"><span class="s-title">서울시립미술관 공무직 공개채용 최종합격자 발표 공고</span>
+                            <span class="date">2019.03.28</span></a></li>
+                        <li><a href="#"><span class="s-title">서울시립미술관 공무직 공개채용 면접시험 합격자 발표</span>
+                            <span class="date">2019.03.25</span></a></li>
+                        <li><a href="#"><span class="s-title">서울시립미술관 공무직(시설정비원 및 시설청소원) 서류심사 합격자 발표 및 면접시험 공고</span>
+                            <span class="date">2019.03.12</span></a></li>
+                    </ul>
+                </div>
+                <div id="tab7">
+                    <ul>
+                        <li><a href="#"><span class="s-title">(2019 SeMA-하나 평론상) 공모 보도자료</span>
+                            <span class="date">2019.06.03</span></a></li>
+                        <li><a href="#"><span class="s-title">서울시립미술관-세마인-시디즈 문화예술활성화 위한 업무협약 체결 보도자료</span>
+                            <span class="date">2019.05.30</span></a></li>
+                        <li><a href="#"> <span class="s-title">"여름의 문턱", 5월 29일 (콘서트+뮤지엄나이트) 보도자료(데이비드 호크니)보도자료 </span>
+                            <span class="date">2019.05.22</span></a></li>
+                        <li><a href="#"><span class="s-title">북서울미술관 전시연계 시니어 무용 프로그램 보도자료</span>
+                            <span class="date">2019.05.20</span></a></li>
+                        <li><a href="#"><span class="s-title">2019 신진미술인 전시지원 프로그램 보도자료</span>
+                            <span class="date">2019.05.07</span></a></li>
+                    </ul>  
+                </div>               
+            </div>            
+        </article>
+    </section>
+    <!--/gallery list-->
+    
+    <!--footer-->
+    <footer>
+        <div class="footer-btn">
+            <button class="icon icon-docent"></button>
+            <button class="icon icon-twitt"></button>
+            <button class="icon icon-facebook"></button>
+            <button class="icon icon-insta"></button>
+        </div>
+        <a href="#">개인정보처리방침</a>
+        <a href="#">| 사이트맵</a> 
+        <address>04515 서울특별시 중구 덕수궁길 61 (서소문동) TEL:(02) 2124-8800 sema@seoul.go.kr</address>   
+        <small> &copy;2018 Seoul Museum of Art All rights reserved.</small>
+    </footer>  
+    <!--/footer-->
+
+</body>
+</html>

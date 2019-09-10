@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>서울시립미술관(웹)</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/web.css">    
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/art.js"></script>
+    <script src="js/tabcontents.js"></script>  
+</head>
+
+<body>
+<!-- 상단 공지영역 ==================================================================================-->
+    <aside class="notice">
+    <!-- 서울 특별시 공지영역 -->
+        <div class="seoul-gnb-holder">       
+            <a href="https:/www.seoul.go.kr/sgnb/seoulgnblog.do?gid=G079&amp;kind=logo&amp;link=https://www.seoul.go.kr" 
+            target="_blank" title="새창열림" class="icon icon-iseoulu">
+                <span class="blind">서울특별시</span>
+            </a>
+                        
+            <dl class="seoul-gnb-news">
+                <dt>
+                    <a href="https://www.seoul.go.kr/realmnews/in/list.do" target="_blank" 
+                    title="새창열림(서울소식)" class="icon icon-notice">
+                        <span class="blind">서울소식</span>
+                    </a>
+                </dt>
+                <dd>
+                    <a href="#" trget="_blank" title="새창열림">2019 청소년 정책 아카데미 청소년 우리가 바꾸는 서울</a>
+                </dd>
+                <dd>
+                    <a href="#" trget="_blank" title="새창열림">2019년 서울형 여행바우처 지원사업 2차 참여자 모집 공고</a>
+                </dd>
+                <dd>
+                    <a href="//www.seoul.go.kr/sgnb/seoulgnblog.do?gid=G079&amp;kind=hotissue&amp;link=http://news.seoul.go.kr/citybuild/archives/504975" target="_blank" title="새창열림">서울도시재생이야기관 '어반살롱(URBAN SALON)' 1회 개최</a>
+                </dd>
+                <dd>
+                    <a href="//www.seoul.go.kr/sgnb/seoulgnblog.do?gid=G079&amp;kind=hotissue&amp;link=http://news.seoul.go.kr/gov/archives/507431" target="_blank" title="새창열림">지속가능 서울 시민공청회 참가단 모집</a>
+                </dd>
+            </dl>			
+            <dl class="seoul-gnb-menu">
+                <dt class="blind">주요메뉴</dt>
+                <dd>
+                    <a href="//www.seoul.go.kr/sgnb/seoulgnblog.do?gid=G079&amp;
+                    kind=seoulnews&amp;link=https://www.seoul.go.kr/realmnews/in/list.do" 
+                    target="_blank" title="새창열림" class="seoul-gnb-icon-menu1 wise-link" 
+                    data-kind="seoulnews">서울소식</a>
+                </dd>
+                <dd>
+                    <a href="//www.seoul.go.kr/sgnb/seoulgnblog.do?gid=G079&amp;
+                    kind=eungdapso&amp;link=http://eungdapso.seoul.go.kr" target="_blank" 
+                    title="새창열림" class="seoul-gnb-icon-menu2 wise-link" 
+                    data-kind="eungdapso">응답소</a>
+                </dd>
+                <dd>   
+                    <a href="//www.seoul.go.kr/sgnb/seoulgnblog.do?gid=G079&amp;
+                    kind=opengov&amp;link=http://opengov.seoul.go.kr" target="_blank" 
+                    title="새창열림" class="seoul-gnb-icon-menu3 wise-link" 
+                    data-kind="opengov">정보공개</a>
+                </dd>
+                <dd>
+                    <button type="button" class="seoul-gnb-icon-menu4">분야별정보</button>
+                    <div class="seoul-gnb-menu-section" style="display: none;">
+                        <dl>
+                            <dt>분야별정보</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        <a href="//www.seoul.go.kr/sgnb/seoulgnblog.do?gid=G079&amp;
+                                        kind=citybuild&amp;link=http://news.seoul.go.kr/citybuild/" 
+                                        target="_blank" title="새창열림" class="wise-link" 
+                                        data-kind="citybuild">주택</a>
+                                    </li>
+                                    <li>
+                                        <a href="//www.seoul.go.kr/sgnb/seoulgnblog.do?gid=G079&amp;
+                                        kind=economy&amp;link=http://news.seoul.go.kr/economy/" 
+                                        target="_blank" title="새창열림" class="wise-link" 
+                                        data-kind="economy">경제</a>
+                                    </li>
+                                    <li>
+                                        <a href="//www.seoul.go.kr/sgnb/seoulgnblog.do?gid=G079&amp;
+                                        kind=traffic&amp;link=http://news.seoul.go.kr/traffic/" 
+                                        target="_blank" title="새창열림" class="wise-link" 
+                                        data-kind="traffic">교통</a>
+                                    </li>
+                                    <li>
+                                        <a href="//www.seoul.go.kr/sgnb/seoulgnblog.do?gid=G079&amp;
+                                        kind=env&amp;link=http://news.seoul.go.kr/env/" target="_blank" 
+                                        title="새창열림" class="wise-link" data-kind="env">환경</a>
+                                    </li>
+                                    <li>
+                                        <a href="//www.seoul.go.kr/sgnb/seoulgnblog.do?gid=G079&amp;
+                                        kind=welfare&amp;link=http://news.seoul.go.kr/welfare/" 
+                                        target="_blank" title="새창열림" class="wise-link" 
+                                        data-kind="welfare">복지</a>
+                                    </li>
+                                    <li>
+                                        <a href="//www.seoul.go.kr/sgnb/seoulgnblog.do?gid=G079&amp;
+                                        kind=safe&amp;link=http://news.seoul.go.kr/safe/" target="_blank" 
+                                        title="새창열림" class="wise-link" data-kind="safe">안전</a>
+                                    </li>
+                                    <li>
+                                        <a href="//www.seoul.go.kr/sgnb/seoulgnblog.do?gid=G079&amp;
+                                        kind=culture&amp;link=http://news.seoul.go.kr/culture/" target="_blank" 
+                                        title="새창열림" class="wise-link" data-kind="culture">문화</a>
+                                    </li>
+                                    <li>
+                                        <a href="//www.seoul.go.kr/sgnb/seoulgnblog.do?gid=G079&amp;
+                                        kind=gov&amp;link=http://news.seoul.go.kr/gov/" target="_blank" 
+                                        title="새창열림" class="wise-link" data-kind="gov">행정</a>
+                                    </li>								
+                                </ul>
+                            </dd>
+                        </dl>
+                        <p>
+                            <a href="//www.seoul.go.kr/sgnb/seoulgnblog.do?gid=G079&amp;kind=allservice&amp;
+                            link=https://www.seoul.go.kr/service/all.do" target="_blank" title="새창열림" 
+                            class="wise-link" data-kind="allservice">
+                                <span class="seoul-gnb-icon-service"></span> 서비스 전체보기
+                            </a>
+                        </p>
+                        <button type="button">
+                            <span class="seoul-gnb-icon-service-close"></span>
+                            <span class="hd-element">분야별 정보 닫기</span>
+                        </button>
+                    </div>
+                </dd>
+            </dl>
+        </div> 
+    <!-- /서울 특별시 공지영역 -->
+    
+    <!-- 미술관 공지 -->
+        <div class="sema-notice">
+            <div class="center">
+                <a href="#">데이비드 호크니 展(예매 1899-0042 ticket.melon.com 전시문의 1833-8085 단체도슨트신청 02-323-4501)</a>
+                <button class="icon icon-close">
+                    <span class="blind">닫기</span>
+                </button>
+            </div>                
+        </div>
+    <!-- /미술관공지 -->
+    </aside>
+<!-- /상단 공지영역 ==================================================================================-->
+
+<!-- header영역 ==================================================================================-->
+    <header>
+        <div class="top-area">
+        <!-- 언어 영역 -->
+            <div class="lang">
+                <a href="#">언어<i class="icon icon-right-triangle"></i></a>
+                <ul>
+                    <li><a href="#" class="active">KO</a></li>
+                    <li><a href="#">EN</a></li>
+                    <li><a href="#">CN</a></li>
+                    <li><a href="#">JP</a></li>
+                </ul>
+            </div>
+        <!-- /언어 영역 -->
+        
+            <div class="topbtn-area">       
+                <button class="icon icon-search"></button>
+                <form action="searchResult.html" class="search">
+                    <input type="text" placeholder="검색어를 입력하세요.">
+                    <button class="icon icon-search1"></button>
+                </form>
+                <button class="icon icon-like"><span class="blind">즐겨찾기</span> </button>
+                <button class="icon icon-logout"><span class="blind">로그인</span></button>
+            </div>
+        <!-- 로그인 팝업 -->
+            <div class="login-pop">
+                <div class="user-info">
+                    <span><b>홍길동</b>님 반갑습니다.</span>
+                </div>
+                <div class="login-form">
+                    <div class="wrap">
+                        <form action="">
+                            <i class="icon icon-popclose"></i>
+                            <input type="text" placeholder="아이디 또는 이메일을 입력하세요." id="id">
+                            <input type="password" placeholder="비밀번호를 입력하세요." id="password">
+                            <button id="btn-submit" type="button">login</button>            
+                        </form>
+                        <div class="find-info">
+                            <span> 정보를 잊으셨나요?</span>
+                            <div class="link">
+                                <a href="#">아이디찾기</a> | <a href="#">비밀번호찾기</a>                
+                            </div>
+                        </div>
+                        <div class="sns-login">
+                            <a href=""><i class="icon icon-kakao"></i><span> 카카오톡 로그인</span></a>
+                            <a href=""><i class="icon icon-naver"></i><span> 네이버 로그인</span></a>
+                            <a href=""><i class="icon icon-facebook"></i><span>페이스북 로그인</span></a>
+                            <a href=""><i class="icon icon-google"></i><span> 구글 로그인</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        <!-- /로그인 팝업 -->
+
+        </div>   
+
+        <!-- nav 영역 -->
+        <nav>
+            <div class="nav_wrap">   
+                <h1 class="logo">             
+                    <a class="icon icon-semalogo"><span class="blind">시립미술관</span></a>
+                </h1>
+                <!-- nav menu -->
+                <h2 class="blind">Menu</h2>
+                <div class="depth2-bg"></div>
+                <ul class="gnb">
+                    <li><a href="#">전시</a>
+                        <ul>
+                            <li><a href="#">현재전시</a></li>
+                            <li ><a href="#">예정전시</a></li>
+                            <li><a href="#">지난전시</a></li>
+                            <li><a href="#">연간전시일정</a></li>
+                            <li><a href="#">도슨트 시간안내</a></li>
+                            <li><a href="#">서울미디어시티비엔날레</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">교육/행사</a>
+                        <ul>
+                            <li><a href="#">현재교육</a></li>
+                            <li><a href="#">예정교육</a></li>
+                            <li><a href="#">지난교육</a></li>
+                            <li><a href="#">연간교육일정</a></li>
+                            <li><a href="#">교육자료실</a></li>
+                            <li><a href="#">문화행사</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">소식/참여</a>
+                        <ul>
+                            <li><a href="#">SeMA뉴스</a></li>
+                            <li><a href="#">신진미술인지원</a></li>
+                            <li><a href="#">대관SeMA영상</a></li>
+                            <li><a href="#">SeMA매거진</a></li>
+                            <li><a href="#">SeMA패밀리</a></li>
+                            <li><a href="#">SeMA SNS만족도조사</a></li>
+                            <li><a href="#">자유게시판</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">SeMa소개</a>
+                        <ul>
+                            <li><a href="#">비전/전략</a></li>
+                            <li><a href="#">미술관안내</a></li>
+                            <li><a href="#">조직/연혁/MI</a></li>
+                            <li><a href="#">미술관 관련 규정</a></li>
+                            <li><a href="#">미술관 후원회</a></li>
+                            <li><a href="#">신규분관조성</a></li>
+                            <li><a href="#">소장품</a></li>
+                            <li><a href="#">연구 출판자료</a></li>
+                        </ul>
+                    </li>               
+                </ul>
+                <!-- /nav menu -->
+            </div>
+        </nav>
+        <!-- /nav 영역 -->
+
+        <!-- 전시관 탭영역 -->
+        <div class="tab">
+            <h2 class="blind">각 전시관 탭</h2>
+            <ul class="tab-btn">
+                <li><a href="#tab1" class="active">서소문본관</a></li>
+                <li><a href="#tab2">북서울미술관</a></li>
+                <li><a href="#tab3">남서울미술관</a></li>
+                <li><a href="#tab4">난지미술창작스튜디오</a></li>
+                <li><a href="#tab5">SeMA창고</a></li>
+                <li><a href="#tab6">백남준기념관</a></li>
+                <li><a href="#tab7">SeMA벙커</a></li>
+            </ul>
+        </div>
+        
+    </header>
+<!-- /header영역 ==================================================================================-->
+    
+<!--퀵메뉴 ==================================================================================-->
+    <aside id="qiuck-menu">
+        <div class="quick-menu-area">        
+            <button class="icon icon-docent"></button>                               
+            <button class="icon icon-twitt"></button>        
+            <button class="icon icon-insta"></button>         
+            <button class="icon icon-top"></button>
+        </div>
+    </aside>
+<!--/퀵메뉴 ==================================================================================-->
+
+<!--메인 컨텐츠 영역 ==================================================================================-->
+    <section class="list">
+        <!--전시리스트-->
+        <article class="exhibition_list center">
+            <ul>                                                                                
+            </ul>             
+        </article>
+        <!--/전시리스트-->
+    
+        <!--프로그램 슬라이드-->
+        <article class="info">
+            <div class="program">
+                <h2>이달의 행사</h2>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(img/서event3.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/서event2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/남event1.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/백event2-.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/벙event1.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/벙event2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/창event1.jpg)"></div>     
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>        
+                <a href="#" class="center">view more <i class="icon icon-eventmore"></i></a>            
+            </div>
+            <div class="article-info">                
+                <span>미술관 정보 안내</span>
+                <ul class="infotab-nav">
+                    <li><a href="#tab1" class="active"><i class="icon icon-calender"></i>전시일정</a></li>
+                    <li><a href="#tab2"><i class="icon icon-info"></i>이용안내</a></li>
+                    <li><a href="#tab3"><i class="icon icon-member"></i>멤버쉽</a></li>
+                    <li><a href="#tab4"><i class="icon icon-map"></i>위치안내</a></li>
+                </ul>
+                <div class="tab-contents1 ">
+                    <div id="tab1" class="active" style="display: block;">
+                        <i class="icon icon-calenderw"></i>            
+                        <p> 이달의 <br> 전시일정을 <br> 알아보세요.</p>
+                        <button>더보기</button>  
+                    </div>
+                    <div id="tab2">
+                        <i class="icon icon-infow"></i>
+                        <p>미술관의 <br> 이용방법이 <br> 궁금하신가요?</p>
+                        <button>더보기</button>
+                    </div>
+                    <div id="tab3">
+                        <i class="icon icon-memberw"></i>
+                        <p>멤버쉽가입을 <br> 통해 혜택을 <br> 누려보세요.</p>
+                        <button>더보기</button>
+                    </div>
+                    <div id="tab4">
+                        <i class="icon icon-mapw"></i>
+                        <p>어떻게 가는지 <br> 알고싶으신가요?</p>
+                        <button>더보기</button>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!--/프로그램 슬라이드-->
+    
+        <!--하단영역 탭-->
+        <article class="bottom-tab">
+            <ul class="tab-nav">
+                <li><a href="#tab5" class="active">공지</a></li>
+                <li><a href="#tab6">채용</a></li>
+                <li><a href="#tab7">SeMA뉴스</a></li>
+            </ul>
+            <div class="tab-contents">
+                <div id="tab5" style="display: block;">
+                    <ul>
+                        <li><a href="#"><span class="s-title">2019 SeMA-하나 평론상 공모 안내 </span>
+                            <span class="date">2019.08.01-08.25</span></a></li>
+                        <li><a href="#"><span class="s-title">[남서울미술관] 임시휴관 안내 </span>
+                            <span class="date">2019.05.27-06.25</span></a></li>
+                        <li><a href="#"><span class="s-title">6월 북서울미술관 문화행사 일정</span>
+                            <span class="date">2019.07.02-07.31</span></a></li>
+                        <li><a href="#"><span class="s-title">(데이비드 호크니)展 전시해설 서비스 예약 및 운영 시간 변경</span>
+                            <span class="date">2019.06-08</span></a></li>
+                        <li><a href="#"><span class="s-title">분관시설을 활용한 「2019 SeMA 공간지원사업」 운영</span>
+                            <span class="date">2019.06.11-12.28</span></a></li>                                
+                    </ul>
+                </div>
+                <div id="tab6">
+                    <ul>
+                        <li><a href="#"><span class="s-title">서울시립미술관 기간제근로자(경비) 서류 합격자 명단 공고</span>
+                            <span class="date">2019.06.18</span></a></li>
+                        <li><a href="#"> <span class="s-title">2019년 서울시립미술관 기간제근로자(시설경비원, 대체인력) 채용공고</span>
+                            <span class="date">2019.06.04</span></a></li>
+                        <li><a href="#"><span class="s-title">서울시립미술관 공무직 공개채용 최종합격자 발표 공고</span>
+                            <span class="date">2019.03.28</span></a></li>
+                        <li><a href="#"><span class="s-title">서울시립미술관 공무직 공개채용 면접시험 합격자 발표</span>
+                            <span class="date">2019.03.25</span></a></li>
+                        <li><a href="#"><span class="s-title">서울시립미술관 공무직(시설정비원 및 시설청소원) 서류심사 합격자 발표 및 면접시험 공고</span>
+                            <span class="date">2019.03.12</span></a></li>
+                    </ul>
+                </div>
+                <div id="tab7">
+                    <ul>
+                        <li><a href="#"><span class="s-title">(2019 SeMA-하나 평론상) 공모 보도자료</span>
+                            <span class="date">2019.06.03</span></a></li>
+                        <li><a href="#"><span class="s-title">서울시립미술관-세마인-시디즈 문화예술활성화 위한 업무협약 체결 보도자료</span>
+                            <span class="date">2019.05.30</span></a></li>
+                        <li><a href="#"> <span class="s-title">"여름의 문턱", 5월 29일 (콘서트+뮤지엄나이트) 보도자료(데이비드 호크니)보도자료 </span>
+                            <span class="date">2019.05.22</span></a></li>
+                        <li><a href="#"><span class="s-title">북서울미술관 전시연계 시니어 무용 프로그램 보도자료</span>
+                            <span class="date">2019.05.20</span></a></li>
+                        <li><a href="#"><span class="s-title">2019 신진미술인 전시지원 프로그램 보도자료</span>
+                            <span class="date">2019.05.07</span></a></li>
+                    </ul>  
+                </div>
+                <button class="icon icon-eventmore"><span class="blind">더보기</span></button>                    
+            </div>
+    
+            <div class="research">
+                <div>
+                    <i class="icon icon-research"></i>
+                    <a href="#">만족도조사 <i class="icon icon-eventmore"></i></a> 
+                </div>
+                <ul>
+                    <li><a href="#">2018년도 홈페이지 및 sns만족도 조사</a></li>
+                    <li><a href="#">2017년도 홈페이지 및 sns만족도 조사</a></li>
+                    <li><a href="#">2016년도 홈페이지 및 sns만족도 조사</a></li>
+                    <li><a href="#">2015년도 홈페이지 및 sns만족도 조사</a></li>
+                    <li><a href="#">2014년도 홈페이지 및 sns만족도 조사</a></li>
+                </ul>
+            </div>
+        </article>
+    </section>
+<!--/메인 컨텐츠 영역 ==================================================================================-->
+
+<!--footer 영역 ==================================================================================-->    
+    <footer>
+        <button class="icon icon-webmark"></button>
+        <a href="#">개인정보처리방침</a>
+        <a href="#">| 사이트맵</a> 
+        <address>04515 서울특별시 중구 덕수궁길 61 (서소문동) TEL:(02) 2124-8800 sema@seoul.go.kr</address>   
+        <small> &copy;2018 Seoul Museum of Art All rights reserved.</small>
+    </footer>  
+<!--/footer 영역 ==================================================================================-->    
+     
+</body>
+</html>
